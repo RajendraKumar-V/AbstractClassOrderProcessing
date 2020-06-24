@@ -16,4 +16,12 @@ namespace AbstarctClassOrderProcessing
             return "Generate packing slip for shipping";
         }
     }
+
+    public class Book : PaymentType
+    {
+        public override string TypeOfTask()
+        {
+            return "Create a duplicate packing slip for the royality department";
+        }
+    }
 }
