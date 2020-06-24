@@ -56,4 +56,12 @@ namespace AbstarctClassOrderProcessing
             return "add a free first aid video";
         }
     }
+
+    public class Physicalproductorbook : PaymentType
+    {
+        public override string TypeOfTask()
+        {
+            return "generate a commission";
+        }
+    }
 }
