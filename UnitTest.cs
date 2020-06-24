@@ -75,7 +75,7 @@ namespace AbstarctClassOrderProcessing
         }
 
         [Test]
-        public void MembershipOrUpgrade()
+        public void TestMembershipOrUpgrade()
         {
             // arrange
             var sut = new Mock<PaymentType>();
@@ -87,6 +87,22 @@ namespace AbstarctClassOrderProcessing
 
             // assert
             Assert.AreEqual("email the owner and inform them", actual);
+
+        }
+
+        [Test]
+        public void TestVideo()
+        {
+            // arrange
+            var sut = new Mock<PaymentType>();
+
+            sut.Setup(x => x.TypeOfTask()).Returns("add a free first aid video");
+
+            // act
+            var actual = sut.Object.TypeOfTask();
+
+            // assert
+            Assert.AreEqual("add a free first aid video", actual);
 
         }
     }
