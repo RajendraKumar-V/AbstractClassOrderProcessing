@@ -1,3 +1,4 @@
+using Moq;
 using NUnit.Framework;
 
 namespace AbstarctClassOrderProcessing
@@ -10,9 +11,19 @@ namespace AbstarctClassOrderProcessing
         }
 
         [Test]
-        public void Test1()
+        public void Test1PhysicalProduct()
         {
-            Assert.Pass();
+            // arrange
+            var sut = new Mock<PaymentType>();
+
+            sut.Setup(x => x.TypeOfTask()).Returns("Generate packing slip for shipping");
+
+            // act
+            var actual = sut.Object.TypeOfTask();
+
+            // assert
+            Assert.AreEqual("Generate packing slip for shipping", actual);
+          
         }
     }
 }

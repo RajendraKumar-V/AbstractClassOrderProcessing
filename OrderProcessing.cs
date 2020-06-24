@@ -6,14 +6,14 @@ namespace AbstarctClassOrderProcessing
 {
     public abstract class PaymentType
     {
-        public abstract void TypeOfTask();
+        public abstract string TypeOfTask();
     }
 
     public class PhysicalProduct : PaymentType
     {
-        public override void TypeOfTask()
+        public override string TypeOfTask()
         {
-            Console.WriteLine("Generate packing slip for shipping");
+            return "Generate packing slip for shipping";
         }
     }
 }
