@@ -32,4 +32,12 @@ namespace AbstarctClassOrderProcessing
             return "activate that membership";
         }
     }
+
+    public class UpgradeMembershipp : PaymentType
+    {
+        public override string TypeOfTask()
+        {
+            return "upgarde to membership";
+        }
+    }
 }
