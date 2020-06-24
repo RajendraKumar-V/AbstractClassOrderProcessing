@@ -40,4 +40,12 @@ namespace AbstarctClassOrderProcessing
             return "upgarde to membership";
         }
     }
+
+    public class MembershipOrUpgrade : PaymentType
+    {
+        public override string TypeOfTask()
+        {
+            return "email the owner and inform them";
+        }
+    }
 }
