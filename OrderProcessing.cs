@@ -48,4 +48,12 @@ namespace AbstarctClassOrderProcessing
             return "email the owner and inform them";
         }
     }
+
+    public class Video : PaymentType
+    {
+        public override string TypeOfTask()
+        {
+            return "add a free first aid video";
+        }
+    }
 }
