@@ -24,4 +24,12 @@ namespace AbstarctClassOrderProcessing
             return "Create a duplicate packing slip for the royality department";
         }
     }
+
+    public class Membership : PaymentType
+    {
+        public override string TypeOfTask()
+        {
+            return "activate that membership";
+        }
+    }
 }

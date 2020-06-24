@@ -57,5 +57,21 @@ namespace AbstarctClassOrderProcessing
             Assert.AreEqual("activate that membership", actual);
 
         }
+
+        [Test]
+        public void TestUpgradeMembership()
+        {
+            // arrange
+            var sut = new Mock<PaymentType>();
+
+            sut.Setup(x => x.TypeOfTask()).Returns("upgarde to membership");
+
+            // act
+            var actual = sut.Object.TypeOfTask();
+
+            // assert
+            Assert.AreEqual("upgarde to membership", actual);
+
+        }
     }
 }
