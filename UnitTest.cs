@@ -105,5 +105,21 @@ namespace AbstarctClassOrderProcessing
             Assert.AreEqual("add a free first aid video", actual);
 
         }
+
+        [Test]
+        public void TestPhysicalproductorbook()
+        {
+            // arrange
+            var sut = new Mock<PaymentType>();
+
+            sut.Setup(x => x.TypeOfTask()).Returns("generate a commission");
+
+            // act
+            var actual = sut.Object.TypeOfTask();
+
+            // assert
+            Assert.AreEqual("generate a commission", actual);
+
+        }
     }
 }
