@@ -41,5 +41,21 @@ namespace AbstarctClassOrderProcessing
             Assert.AreEqual("Create a duplicate packing slip for the royality department", actual);
 
         }
+
+        [Test]
+        public void TestMembership()
+        {
+            // arrange
+            var sut = new Mock<PaymentType>();
+
+            sut.Setup(x => x.TypeOfTask()).Returns("activate that membership");
+
+            // act
+            var actual = sut.Object.TypeOfTask();
+
+            // assert
+            Assert.AreEqual("activate that membership", actual);
+
+        }
     }
 }
